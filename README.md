@@ -2,7 +2,7 @@
 
 Cartiva is a Next.js storefront for browsing products, brands, and categories, then managing an authenticated shopping journey from wishlist and cart through checkout and order history. The UI is tailored to the Route Academy ecommerce API used by the server-side service modules.
 
-**Repository:** [zeyadhatem00/Cartiva](https://github.com/zeyadhatem00/Cartiva)
+**Repository:** [zeyadhatem00/Cartiva](https://github.com/zeyadhatem00/cartiva)
 **Default branch:** `master`
 
 ## What is implemented
