@@ -17,7 +17,7 @@ export default function CategoryCard(category: Category) {
               width={300}
               height={300}
               alt={category.name}
-              className="aspect-[1.25] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="aspect-[1.25] h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
           <div className="flex items-end justify-between px-1 pb-2 pt-4">
@@ -42,7 +42,7 @@ export default function CategoryCard(category: Category) {
               alt={category.name}
               width={100}
               height={100}
-              className="aspect-square w-full object-cover transition-transform group-hover:scale-105"
+              className="aspect-square h-full w-full object-cover transition-transform group-hover:scale-105"
             />
           </div>
           <div className="mt-3 flex items-center justify-between">
