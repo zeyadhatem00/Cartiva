@@ -5,6 +5,7 @@ import { GetHomeProducts } from "./Services/HomeProducts.api";
 import ProductCard from "./_Components/ProductCard/page";
 import HomeDoublecard from "./_Components/heroDoubleCARD/page";
 import HeroSlider from "./_Components/heroSlider/page";
+import Link from "next/link";
 
 export default async function Home() {
   let products = await GetHomeProducts();
@@ -62,12 +63,12 @@ export default async function Home() {
                 Find your category
               </h2>
             </div>
-            <a
-              href="#all-categories"
+            <Link
+              href="/Categories"
               className="hidden items-center gap-1 text-xs font-black text-[#2864d7] hover:text-[#151922] sm:inline-flex"
             >
               View all <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           <CategoryMarquee />
