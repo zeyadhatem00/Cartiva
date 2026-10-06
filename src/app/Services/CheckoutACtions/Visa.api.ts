@@ -3,7 +3,7 @@ import { getToken } from "../GetMyToken";
 export async function VisaPayment(data: any, cartid: string) {
   const token = await getToken();
   let req = await fetch(
-    `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartid}?url=http://localhost:3000`,
+    `${process.env.Base_URL}orders/checkout-session/${cartid}?url=${process.env.Domain}`,
     {
       method: "POST",
       headers: {

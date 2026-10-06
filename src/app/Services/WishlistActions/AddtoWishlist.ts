@@ -3,7 +3,7 @@ import { getToken } from "../GetMyToken";
 export async function AddAWishlist(id: string) {
   const token = await getToken();
 
-  let req = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
+  let req = await fetch(`${process.env.Base_URL}wishlist`, {
     method: "POST",
     body: JSON.stringify({
       productId: id,

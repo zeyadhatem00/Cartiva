@@ -3,7 +3,7 @@ import { getToken } from "../GetMyToken";
 export async function UpdateProductQuantity(count: number, id: string) {
   const token = await getToken();
 
-  let req = await fetch(`https://ecommerce.routemisr.com/api/v1/cart/${id}`, {
+  let req = await fetch(`${process.env.Base_URL}cart/${id}`, {
     method: "PUT",
     body: JSON.stringify({
       count: count,

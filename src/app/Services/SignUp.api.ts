@@ -3,7 +3,7 @@
 import { SignUpINterface } from "../interface/Auth";
 
 export async function signup(data: SignUpINterface) {
-  let req = await fetch(`https://ecommerce.routemisr.com/api/v1/auth/signup`, {
+  let req = await fetch(`${process.env.Base_URL}auth/signup`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

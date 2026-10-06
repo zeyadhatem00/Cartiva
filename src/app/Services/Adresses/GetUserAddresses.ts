@@ -3,7 +3,7 @@ import { getToken } from "../GetMyToken";
 
 export async function GetAddresses(): Promise<Address> {
   const token = await getToken();
-  let req = await fetch(`https://ecommerce.routemisr.com/api/v1/addresses`, {
+  let req = await fetch(`${process.env.Base_URL}addresses`, {
     headers: {
       token: `${token ? token : ""}`,
     },

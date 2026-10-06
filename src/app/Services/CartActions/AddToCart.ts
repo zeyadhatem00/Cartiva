@@ -3,7 +3,7 @@ import { getToken } from "../GetMyToken";
 export async function Addtocart(id: string) {
   const token = await getToken();
 
-  let req = await fetch(`https://ecommerce.routemisr.com/api/v1/cart`, {
+  let req = await fetch(`${process.env.Base_URL}cart`, {
     method: "POST",
     body: JSON.stringify({
       productId: id,
