@@ -77,7 +77,7 @@ export default async function BrandsPage() {
               </p>
             </div>
             <Link
-              href="/"
+              href="/Shop"
               className="inline-flex shrink-0 items-center gap-2 self-start rounded-lg bg-[#2864d7] px-4 py-3 text-[10px] font-black uppercase tracking-widest text-white shadow-[0_8px_18px_rgba(40,100,215,0.18)] transition-colors hover:bg-[#151922]"
             >
               Explore products <ArrowRight size={14} />
