@@ -39,10 +39,7 @@ export default async function CategoriesPage() {
           </div>
         </section>
 
-        <section
-          id="category-grid"
-          className="mt-12"
-        >
+        <section id="category-grid" className="mt-12">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-[10px] font-black uppercase tracking-[0.15em] text-[#2864d7]">
