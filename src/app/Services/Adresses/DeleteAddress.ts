@@ -1,3 +1,4 @@
+"use server";
 import { getToken } from "../GetMyToken";
 import { Address } from "./../../interface/Address";
 

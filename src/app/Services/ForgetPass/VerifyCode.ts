@@ -1,3 +1,4 @@
+"use server";
 export async function Verify(data: { resetCode: string }) {
   let req = await fetch(`${process.env.Base_URL}auth/verifyResetCode`, {
     method: "POST",

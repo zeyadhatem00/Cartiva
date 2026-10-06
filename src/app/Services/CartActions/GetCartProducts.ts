@@ -1,3 +1,4 @@
+"use server";
 import { getToken } from "../GetMyToken";
 import { cart } from "@/app/interface/cart";
 

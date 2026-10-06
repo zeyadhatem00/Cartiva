@@ -1,3 +1,4 @@
+"use server";
 import { getToken } from "../GetMyToken";
 
 export async function DeleteProductFromCART(id: string) {

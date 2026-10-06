@@ -1,3 +1,4 @@
+"use server";
 export async function SendCODE(data: { email: string }) {
   let req = await fetch(`${process.env.Base_URL}auth/forgotPasswords`, {
     method: "POST",

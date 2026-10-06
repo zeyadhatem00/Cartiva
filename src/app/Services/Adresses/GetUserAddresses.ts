@@ -1,3 +1,4 @@
+"use server";
 import { Address } from "@/app/interface/Address";
 import { getToken } from "../GetMyToken";
 

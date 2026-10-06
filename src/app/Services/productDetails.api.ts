@@ -1,3 +1,4 @@
+"use server";
 import { ProductDetails } from "../interface/ProductDetails";
 
 export async function GetProductDetails(id: string): Promise<ProductDetails> {

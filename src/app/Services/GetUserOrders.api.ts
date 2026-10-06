@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/react";
+"use server";
 import { Order } from "../interface/Orders";
 
 export async function GetOrders(id: string): Promise<Order[]> {

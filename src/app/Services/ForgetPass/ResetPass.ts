@@ -1,3 +1,4 @@
+"use server";
 export async function Reset(data: { email: string; newPassword: string }) {
   let req = await fetch(`${process.env.Base_URL}auth/resetPassword`, {
     method: "PUT",

@@ -1,3 +1,4 @@
+"use server";
 import { Category } from "../interface/Products";
 
 export async function GetBrands(): Promise<Category[]> {

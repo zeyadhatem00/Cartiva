@@ -1,3 +1,4 @@
+"use server";
 import { Product } from "../interface/Products";
 
 export async function GetHomeProducts(): Promise<Product[]> {
