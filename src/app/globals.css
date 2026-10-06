@@ -1,26 +1,124 @@
 @import "tailwindcss";
+@import "@heroui/styles";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: var(--font-exo);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+}
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Logo fade animation */
+.cartiva-logo-fade {
+  animation: cartiva-logo-fade 1.8s ease-in-out infinite;
+}
+
+@keyframes cartiva-logo-fade {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.2;
+    transform: scale(0.98);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Loading dots */
+.cartiva-dot {
+  animation: cartiva-dot 1.2s ease-in-out infinite;
+}
+
+.cartiva-dot-delay {
+  animation: cartiva-dot 1.2s ease-in-out 0.2s infinite;
+}
+
+.cartiva-dot-delay-more {
+  animation: cartiva-dot 1.2s ease-in-out 0.4s infinite;
+}
+
+@keyframes cartiva-dot {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0) scale(0.65);
+  }
+
+  45% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.35);
+  }
+
+  70% {
+    opacity: 0.75;
+    transform: translateY(0) scale(0.9);
+  }
+}
+
+/* Optional floating background shapes */
+.cartiva-float {
+  animation: cartiva-float 7s ease-in-out infinite;
+}
+
+.cartiva-float-reverse {
+  animation: cartiva-float-reverse 8s ease-in-out infinite;
+}
+
+@keyframes cartiva-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(20px, 16px, 0);
+  }
+}
+
+@keyframes cartiva-float-reverse {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-18px, -14px, 0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #edf2f8;
+  border-left: 1px solid #e1e8f2;
+}
+::-webkit-scrollbar-thumb {
+  transition: all 0.3s;
+  min-height: 44px;
+  border: 2px solid #edf2f8;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2864d7 0%, #1f55bc 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 2px 7px rgba(40, 100, 215, 0.22);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #295dd7 0%, #2864d7 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(217, 247, 233, 0.28),
+    0 3px 10px rgba(21, 25, 34, 0.2);
+}
+::-webkit-scrollbar-corner {
+  background: #edf2f8;
 }
