@@ -10,7 +10,6 @@ export async function getToken() {
     token: encryptedToken,
     secret: process.env.AUTH_SECRET!,
   });
-  console.log(encryptedToken);
 
   return TrueToken?.token;
 }

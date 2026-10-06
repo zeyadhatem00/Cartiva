@@ -68,7 +68,6 @@ export default function ShopPage() {
     setvalue("");
     setFilterProducts(products);
     setRange(defaultrange);
-    console.log(products);
   }
 
   function sortHightoLow() {

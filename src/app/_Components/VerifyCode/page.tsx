@@ -34,7 +34,6 @@ export default function VerifyCode({
       toast.error("Wrong");
       setIsSubmitting(false);
     }
-    console.log(res);
   }
   return (
     <>
