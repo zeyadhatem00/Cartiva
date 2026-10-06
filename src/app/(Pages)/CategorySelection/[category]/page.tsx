@@ -3,8 +3,8 @@
 import ProductCard from "@/app/_Components/ProductCard/page";
 import { productscontext } from "@/app/context/productsContext";
 import { Product } from "@/app/interface/Products";
-import { Link } from "@heroui/react";
 import { ArrowRight, ChevronRight, SearchX, ShoppingBag } from "lucide-react";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
 export default function CategoryProductsPage(Props: any) {
@@ -35,56 +35,53 @@ export default function CategoryProductsPage(Props: any) {
 
   return (
     <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-      {filteredProducts.length == 0 ? (
-        <>
-          {" "}
-          <main className="mx-auto max-w-330 px-4 pb-20 lg:px-8">
-            <section className="relative mt-6 overflow-hidden rounded-[24px] bg-[#151922] px-6 py-8 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-10 lg:px-12">
-              <div className="pointer-events-none absolute -right-32 -top-40 size-124 rounded-full bg-[#2864d7]/30 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-52 left-1/3 size-96 rounded-full bg-[#d9f7e9]/10 blur-3xl" />
-              <div className="absolute -right-4 top-0 hidden font-display text-[9rem] font-bold leading-none tracking-[-0.15em] text-white/[0.035] sm:block">
-                STYLE
+      <main className="mx-auto max-w-330 px-4 pb-20 lg:px-8">
+        {" "}
+        <section className="relative mt-6 overflow-hidden rounded-[24px] bg-[#151922] px-6 py-8 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-10 lg:px-12">
+          <div className="pointer-events-none absolute -right-32 -top-40 size-124 rounded-full bg-[#2864d7]/30 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-52 left-1/3 size-96 rounded-full bg-[#d9f7e9]/10 blur-3xl" />
+          <div className="absolute -right-4 top-0 hidden font-display text-[9rem] font-bold leading-none tracking-[-0.15em] text-white/[0.035] sm:block">
+            {categoryName}
+          </div>
+          <div className="relative z-10">
+            <nav className="mb-5 flex items-center gap-2 text-xs font-semibold">
+              <Link href="/" className="text-white/50 hover:text-white">
+                Home
+              </Link>
+              <ChevronRight size={13} />
+              <Link
+                href="/Categories"
+                className="text-white/50 hover:text-white"
+              >
+                Categories
+              </Link>
+              <ChevronRight size={13} />
+              <span className="text-white/80">{categoryName}</span>
+            </nav>
+            <div className="flex items-end justify-between gap-8">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-md bg-[#d9f7e9] px-2.5 py-1.5 text-[9px] font-black uppercase tracking-[0.14em] text-[#15704a]">
+                  <ShoppingBag size={12} />
+                  Curated category
+                </span>
+                <h1 className="mt-5 font-display text-[clamp(2.7rem,5vw,5.2rem)] font-bold leading-[0.88] -tracking-widest">
+                  {categoryName}
+                </h1>
               </div>
-              <div className="relative z-10">
-                <nav className="mb-5 flex items-center gap-2 text-xs font-semibold text-white/50">
-                  <Link href="/" className="hover:text-white">
-                    Home
-                  </Link>
-                  <ChevronRight size={13} />
-                  <Link href="/categories" className="hover:text-white">
-                    Categories
-                  </Link>
-                  <ChevronRight size={13} />
-                  <span className="text-white/80">Men&apos;s clothing</span>
-                </nav>
-                <div className="flex items-end justify-between gap-8">
-                  <div>
-                    <span className="inline-flex items-center gap-2 rounded-md bg-[#d9f7e9] px-2.5 py-1.5 text-[9px] font-black uppercase tracking-[0.14em] text-[#15704a]">
-                      <ShoppingBag size={12} />
-                      Curated category
-                    </span>
-                    <h1 className="mt-5 font-display text-[clamp(2.7rem,5vw,5.2rem)] font-bold leading-[0.88] -tracking-widest">
-                      Men&apos;s
-                      <br />
-                      <span className="text-[#8fc4ff]">clothing.</span>
-                    </h1>
-                    <p className="mt-4 max-w-[52ch] text-sm leading-6 text-white/60 sm:text-base">
-                      Easy layers, everyday sneakers, and dependable essentials
-                      for wherever the day takes you.
-                    </p>
-                  </div>
-                  <div className="hidden shrink-0 gap-3 text-[10px] font-black uppercase tracking-widest text-white/60 sm:flex">
-                    <span className="rounded-full border border-white/15 px-3 py-2">
-                      60 products
-                    </span>
-                    <span className="rounded-full border border-white/15 px-3 py-2">
-                      Fast delivery
-                    </span>
-                  </div>
-                </div>
+              <div className="hidden shrink-0 gap-3 text-[10px] font-black uppercase tracking-widest text-white/60 sm:flex">
+                <span className="rounded-full border border-white/15 px-3 py-2">
+                  {filteredProducts.length} products
+                </span>
+                <span className="rounded-full border border-white/15 px-3 py-2">
+                  Fast delivery
+                </span>
               </div>
-            </section>
-
+            </div>
+          </div>
+        </section>{" "}
+        {filteredProducts.length == 0 ? (
+          <>
+            {" "}
             <section className="mt-8">
               <div className="relative overflow-hidden rounded-[24px] border border-[#e1e5ea] bg-white px-6 py-14 text-center shadow-[0_16px_36px_rgba(21,25,34,0.05)] sm:px-10 sm:py-20">
                 <div className="pointer-events-none absolute -left-20 -top-24 size-64 rounded-full bg-[#eef6ff] blur-3xl" />
@@ -154,55 +151,10 @@ export default function CategoryProductsPage(Props: any) {
                 </div>
               </div>
             </section>
-          </main>
-        </>
-      ) : (
-        <>
-          {" "}
-          <main className="mx-auto max-w-330 px-4 pb-20 lg:px-8">
-            <section className="relative mt-6 overflow-hidden rounded-[24px] bg-[#151922] px-6 py-8 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-10 lg:px-12">
-              <div className="pointer-events-none absolute -right-32 -top-40 size-124 rounded-full bg-[#2864d7]/30 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-52 left-1/3 size-96 rounded-full bg-[#d9f7e9]/10 blur-3xl" />
-              <div className="absolute -right-4 top-0 hidden font-display text-[9rem] font-bold leading-none tracking-[-0.15em] text-white/[0.035] sm:block">
-                {categoryName}
-              </div>
-              <div className="relative z-10">
-                <nav className="mb-5 flex items-center gap-2 text-xs font-semibold">
-                  <Link href="/" className="text-white/50 hover:text-white">
-                    Home
-                  </Link>
-                  <ChevronRight size={13} />
-                  <Link
-                    href="/Categories"
-                    className="text-white/50 hover:text-white"
-                  >
-                    Categories
-                  </Link>
-                  <ChevronRight size={13} />
-                  <span className="text-white/80">{categoryName}</span>
-                </nav>
-                <div className="flex items-end justify-between gap-8">
-                  <div>
-                    <span className="inline-flex items-center gap-2 rounded-md bg-[#d9f7e9] px-2.5 py-1.5 text-[9px] font-black uppercase tracking-[0.14em] text-[#15704a]">
-                      <ShoppingBag size={12} />
-                      Curated category
-                    </span>
-                    <h1 className="mt-5 font-display text-[clamp(2.7rem,5vw,5.2rem)] font-bold leading-[0.88] -tracking-widest">
-                      {categoryName}
-                    </h1>
-                  </div>
-                  <div className="hidden shrink-0 gap-3 text-[10px] font-black uppercase tracking-widest text-white/60 sm:flex">
-                    <span className="rounded-full border border-white/15 px-3 py-2">
-                      {filteredProducts.length} products
-                    </span>
-                    <span className="rounded-full border border-white/15 px-3 py-2">
-                      Fast delivery
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
+          </>
+        ) : (
+          <>
+            {" "}
             <section className="mt-8">
               <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <div>
@@ -224,9 +176,9 @@ export default function CategoryProductsPage(Props: any) {
                 })}
               </div>
             </section>
-          </main>
-        </>
-      )}
+          </>
+        )}
+      </main>
     </div>
   );
 }
