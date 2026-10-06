@@ -34,7 +34,7 @@ export default function CategoryCard(category: Category) {
       ) : (
         <Link
           href={`/CategorySelection/${category.name}`}
-          className="group w-32 shrink-0 rounded-2xl border border-[#e4e7ec] bg-white p-3 transition-all hover:-translate-y-1 hover:border-[#b9ccef] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2864d7]"
+          className="group w-32 lg:w-40 shrink-0 rounded-2xl border border-[#e4e7ec] bg-white p-3 transition-all hover:-translate-y-1 hover:border-[#b9ccef] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2864d7]"
         >
           <div className="overflow-hidden rounded-xl bg-[#e5edf8]">
             <Image
