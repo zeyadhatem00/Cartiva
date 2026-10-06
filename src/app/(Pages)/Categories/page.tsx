@@ -7,8 +7,8 @@ export default async function CategoriesPage() {
 
   return (
     <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-      <main>
-        <section className="relative mx-auto mt-6 max-w-330 overflow-hidden rounded-[24px] bg-[#151922] px-6 py-12 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+      <main className="mx-auto max-w-330 px-4 pb-20 lg:px-8">
+        <section className="relative mx-auto mt-6 overflow-hidden rounded-[24px] bg-[#151922] px-6 py-12 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
           <div className="pointer-events-none absolute -right-32 -top-40 size-136 rounded-full bg-[#2864d7]/30 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-48 left-1/3 size-112 rounded-full bg-[#d9f7e9]/10 blur-3xl" />
           <div className="absolute -right-2 top-4 hidden font-display text-[12rem] font-bold leading-none tracking-[-0.15em] text-white/[0.035] sm:block">
