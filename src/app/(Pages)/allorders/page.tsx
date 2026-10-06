@@ -37,112 +37,107 @@ export default function OrdersPage() {
 
   return (
     <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-     
-
-        {orders.length == 0 ? (
-          <main className="mx-auto flex min-h-[calc(100vh-188px)] max-w-330 items-center justify-center px-4 py-12 lg:px-8 lg:py-16">
-            <section className="w-full max-w-180 text-center">
-              <div className="relative mx-auto grid size-28 place-items-center rounded-[30px] border border-[#c9d7f2] bg-[#eef6ff] text-[#2864d7] shadow-[0_18px_40px_rgba(40,100,215,0.12)] sm:size-32">
-                <div className="absolute inset-3 rounded-[22px] border border-dashed border-[#9fc0f2]" />
-                <PackageOpen size={48} strokeWidth={1.35} />
-                <span className="absolute -right-2 -top-2 grid size-9 place-items-center rounded-full bg-[#2864d7] text-[11px] font-black text-white shadow-[0_8px_18px_rgba(40,100,215,0.25)]">
-                  0
+      {orders.length == 0 ? (
+        <main className="mx-auto flex min-h-[calc(100vh-188px)] max-w-330 items-center justify-center px-4 py-12 lg:px-8 lg:py-16">
+          <section className="w-full max-w-180 text-center">
+            <div className="relative mx-auto grid size-28 place-items-center rounded-[30px] border border-[#c9d7f2] bg-[#eef6ff] text-[#2864d7] shadow-[0_18px_40px_rgba(40,100,215,0.12)] sm:size-32">
+              <div className="absolute inset-3 rounded-[22px] border border-dashed border-[#9fc0f2]" />
+              <PackageOpen size={48} strokeWidth={1.35} />
+              <span className="absolute -right-2 -top-2 grid size-9 place-items-center rounded-full bg-[#2864d7] text-[11px] font-black text-white shadow-[0_8px_18px_rgba(40,100,215,0.25)]">
+                0
+              </span>
+            </div>
+            <p className="mt-8 text-[10px] font-black uppercase tracking-[0.18em] text-[#2864d7]">
+              Your order space is ready
+            </p>
+            <h1 className="mt-3 font-display text-4xl font-bold tracking-[-0.08em] sm:text-6xl">
+              No orders yet.
+            </h1>
+            <p className="mx-auto mt-5 max-w-[42ch] text-sm leading-6 text-[#667180] sm:text-base">
+              Once you place an order, you’ll find every delivery update,
+              payment detail, and receipt right here.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/Shop"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2864d7] px-6 py-3.5 text-[11px] font-black uppercase tracking-widest] text-white shadow-[0_8px_18px_rgba(40,100,215,0.2)] transition-all hover:bg-[#151922] active:scale-[0.98] sm:w-auto"
+              >
+                Start shopping <ArrowRight size={15} />
+              </Link>
+              <Link
+                href="/Categories"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#dfe4ea] bg-white px-6 py-3.5 text-[11px] font-black uppercase tracking-widest] text-[#394351] transition-colors hover:border-[#2864d7] hover:text-[#2864d7] sm:w-auto"
+              >
+                Browse categories
+              </Link>
+            </div>
+            <div className="mx-auto mt-10 grid max-w-155 gap-3 border-t border-[#e4e7ec] pt-6 text-left sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#e4e7ec]">
+              <div className="flex items-center gap-3 px-3 sm:justify-center">
+                <Truck size={19} className="text-[#2864d7]" />
+                <span>
+                  <strong className="block text-[11px]">Fast delivery</strong>
+                  <small className="text-[10px] text-[#8a929f]">
+                    Track every order
+                  </small>
                 </span>
               </div>
-              <p className="mt-8 text-[10px] font-black uppercase tracking-[0.18em] text-[#2864d7]">
-                Your order space is ready
-              </p>
-              <h1 className="mt-3 font-display text-4xl font-bold tracking-[-0.08em] sm:text-6xl">
-                No orders yet.
-              </h1>
-              <p className="mx-auto mt-5 max-w-[42ch] text-sm leading-6 text-[#667180] sm:text-base">
-                Once you place an order, you’ll find every delivery update,
-                payment detail, and receipt right here.
-              </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Link
-                  href="/Shop"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2864d7] px-6 py-3.5 text-[11px] font-black uppercase tracking-widest] text-white shadow-[0_8px_18px_rgba(40,100,215,0.2)] transition-all hover:bg-[#151922] active:scale-[0.98] sm:w-auto"
-                >
-                  Start shopping <ArrowRight size={15} />
-                </Link>
-                <Link
-                  href="/Categories"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#dfe4ea] bg-white px-6 py-3.5 text-[11px] font-black uppercase tracking-widest] text-[#394351] transition-colors hover:border-[#2864d7] hover:text-[#2864d7] sm:w-auto"
-                >
-                  Browse categories
-                </Link>
+              <div className="flex items-center gap-3 px-3 sm:justify-center">
+                <ShieldCheck size={19} className="text-[#2864d7]" />
+                <span>
+                  <strong className="block text-[11px]">Secure checkout</strong>
+                  <small className="text-[10px] text-[#8a929f]">
+                    Protected payments
+                  </small>
+                </span>
               </div>
-              <div className="mx-auto mt-10 grid max-w-155 gap-3 border-t border-[#e4e7ec] pt-6 text-left sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#e4e7ec]">
-                <div className="flex items-center gap-3 px-3 sm:justify-center">
-                  <Truck size={19} className="text-[#2864d7]" />
-                  <span>
-                    <strong className="block text-[11px]">Fast delivery</strong>
-                    <small className="text-[10px] text-[#8a929f]">
-                      Track every order
-                    </small>
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 px-3 sm:justify-center">
-                  <ShieldCheck size={19} className="text-[#2864d7]" />
-                  <span>
-                    <strong className="block text-[11px]">
-                      Secure checkout
-                    </strong>
-                    <small className="text-[10px] text-[#8a929f]">
-                      Protected payments
-                    </small>
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 px-3 sm:justify-center">
-                  <Heart size={19} className="text-[#2864d7]" />
-                  <span>
-                    <strong className="block text-[11px]">Easy returns</strong>
-                    <small className="text-[10px] text-[#8a929f]">
-                      30 days, no drama
-                    </small>
-                  </span>
-                </div>
-              </div>
-    
-            </section>
-          </main>
-        ) : (
-          <>
-             <main className="mx-auto max-w-330 px-4 py-8 lg:px-8 lg:py-10">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <nav
-              className="flex items-center gap-2 text-[11px] font-semibold text-[#8a929f]"
-              aria-label="Breadcrumb"
-            >
-              <Link href="/" className="hover:text-[#2864d7]">
-                Home
-              </Link>
-              <ChevronRight size={13} />
-              <span className="font-bold text-[#394351]">My orders</span>
-            </nav>
-            <div className="mt-5 flex items-center gap-4">
-              <span className="grid size-12 place-items-center rounded-2xl bg-[#eef6ff] text-[#2864d7]">
-                <Package size={23} />
-              </span>
-              <div>
-                <h1 className="font-display text-3xl font-bold tracking-[-0.07em] sm:text-4xl">
-                  My orders
-                </h1>
-                <p className="mt-1 text-xs text-[#667180]">
-                  Track and manage your Cartiva purchases.
-                </p>
+              <div className="flex items-center gap-3 px-3 sm:justify-center">
+                <Heart size={19} className="text-[#2864d7]" />
+                <span>
+                  <strong className="block text-[11px]">Easy returns</strong>
+                  <small className="text-[10px] text-[#8a929f]">
+                    30 days, no drama
+                  </small>
+                </span>
               </div>
             </div>
-          </div>
-          <Link
-            href="/Shop"
-            className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.08em] text-[#2864d7] hover:text-[#151922]"
-          >
-            <ArrowLeft size={14} /> Continue shopping
-          </Link>
-        </div>
+          </section>
+        </main>
+      ) : (
+        <>
+          <main className="mx-auto max-w-330 px-4 py-8 lg:px-8 lg:py-10">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <nav
+                  className="flex items-center gap-2 text-[11px] font-semibold text-[#8a929f]"
+                  aria-label="Breadcrumb"
+                >
+                  <Link href="/" className="hover:text-[#2864d7]">
+                    Home
+                  </Link>
+                  <ChevronRight size={13} />
+                  <span className="font-bold text-[#394351]">My orders</span>
+                </nav>
+                <div className="mt-5 flex items-center gap-4">
+                  <span className="grid size-12 place-items-center rounded-2xl bg-[#eef6ff] text-[#2864d7]">
+                    <Package size={23} />
+                  </span>
+                  <div>
+                    <h1 className="font-display text-3xl font-bold tracking-[-0.07em] sm:text-4xl">
+                      My orders
+                    </h1>
+                    <p className="mt-1 text-xs text-[#667180]">
+                      Track and manage your Cartiva purchases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/Shop"
+                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.08em] text-[#2864d7] hover:text-[#151922]"
+              >
+                <ArrowLeft size={14} /> Continue shopping
+              </Link>
+            </div>
             {orders.map((order) => {
               return (
                 <section
@@ -353,11 +348,9 @@ export default function OrdersPage() {
                 Shop more products <ArrowRight size={14} />
               </Link>
             </div>
-</main>
-
-          </>
-        )}
-      
+          </main>
+        </>
+      )}
     </div>
   );
 }

@@ -18,10 +18,10 @@ export default function layout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-      <main className="mx-auto max-w-[1280px] px-4 py-6 sm:py-8 lg:px-8">
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:py-8 lg:px-8">
         <section className="relative overflow-hidden rounded-[24px] bg-[#151922] px-5 py-7 text-white shadow-[0_18px_44px_rgba(21,25,34,0.12)] sm:px-8 sm:py-9 lg:px-10">
-          <div className="pointer-events-none absolute -right-28 -top-36 size-[28rem] rounded-full bg-[#2864d7]/35 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-44 left-1/3 size-[24rem] rounded-full bg-[#d9f7e9]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 -top-36 size-112 rounded-full bg-[#2864d7]/35 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-44 left-1/3 size-96 rounded-full bg-[#d9f7e9]/10 blur-3xl" />
           <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="mb-4 flex items-center gap-2 text-[11px] font-semibold text-white/55">
@@ -48,7 +48,7 @@ export default function layout({ children }: { children: ReactNode }) {
                 </div>
               </div>
             </div>
-            <div className="hidden max-w-[240px] text-right sm:block">
+            <div className="hidden max-w-60 text-right sm:block">
               <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#8fc4ff]">
                 Member account
               </p>

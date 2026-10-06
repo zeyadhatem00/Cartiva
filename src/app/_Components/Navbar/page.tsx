@@ -18,7 +18,6 @@ import {
   X,
   LogOutIcon,
   PackageOpen,
-
   Settings,
   Package,
   MapPin,
@@ -30,7 +29,6 @@ import Searchbar from "../Search/page";
 import { useContext, useState } from "react";
 import { cartcontext } from "@/app/context/CartContext";
 import { Wishlistcontext } from "@/app/context/wishlistContext";
-
 
 export default function Navbar() {
   let { data: Session } = useSession();
@@ -176,19 +174,19 @@ export default function Navbar() {
                   All Categories
                 </Link>
                 <Link
-                  href="/Shop"
+                  href={`/CategorySelection/${`Electronics`}`}
                   className="px-4 transition-all duration-150 py-3.5 text-[#394351] hover:text-[#2864d7] hover:bg-[#e0edff]"
                 >
                   Electronics
                 </Link>
                 <Link
-                  href="/Shop"
+                  href={`/CategorySelection/${`Women's Fashion`}`}
                   className="px-4 transition-all duration-150 py-3.5 text-[#394351] hover:text-[#2864d7] hover:bg-[#e0edff]"
                 >
                   Women's Fashion
                 </Link>
                 <Link
-                  href="/Shop"
+                  href={`/CategorySelection/${`Men's Fashion`}`}
                   className="px-4 transition-all duration-150 py-3.5 text-[#394351] hover:text-[#2864d7] hover:bg-[#e0edff]"
                 >
                   Men's Fashion

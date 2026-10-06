@@ -1,6 +1,6 @@
 import { getToken } from "../GetMyToken";
 
- export async function CashPayment(data: any , cartid:string) {
+export async function CashPayment(data: any, cartid: string) {
   const token = await getToken();
   let req = await fetch(
     `https://ecommerce.routemisr.com/api/v1/orders/${cartid}`,

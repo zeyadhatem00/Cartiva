@@ -17,7 +17,6 @@ import {
   ShoppingBag,
   ShoppingCart,
   Trash2,
-  UserRound,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

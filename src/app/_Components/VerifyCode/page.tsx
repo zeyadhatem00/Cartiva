@@ -2,7 +2,7 @@
 
 import { SendCODE } from "@/app/Services/ForgetPass/SendCode";
 import { Verify } from "@/app/Services/ForgetPass/VerifyCode";
-import { Button, Form, InputOTP, Label, Spinner } from "@heroui/react";
+import { Button, Form, InputOTP, Spinner } from "@heroui/react";
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { toast } from "sonner";

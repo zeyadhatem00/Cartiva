@@ -4,11 +4,9 @@ import {
   ArrowRight,
   Check,
   ChevronRight,
-  Heart,
   Home,
   RotateCcw,
   ShieldCheck,
-  ShoppingBag,
   Star,
   Truck,
 } from "lucide-react";
@@ -16,7 +14,6 @@ import Link from "next/link";
 import RelatedData from "./../../../_Components/RelatedData/page";
 import Reviews from "@/app/_Components/productReviews/page";
 import AddTocartBtn from "@/app/_Components/AddtocartButton/page";
-import { AddAWishlist } from "@/app/Services/WishlistActions/AddtoWishlist";
 import ADDtoWishlist from "@/app/_Components/AddtoWishlistbtn/page";
 
 export default async function productDetails(props: any) {
@@ -89,7 +86,7 @@ export default async function productDetails(props: any) {
               <div className="mt-5 grid ">
                 <AddTocartBtn id={id} detailsPage={true} />
               </div>
-<ADDtoWishlist detailsPage = {true} id = {id}/>
+              <ADDtoWishlist detailsPage={true} id={id} />
 
               <div className="mt-7 grid grid-cols-3 gap-3 border-t border-[#edf0f3] pt-6">
                 <div className="text-center">

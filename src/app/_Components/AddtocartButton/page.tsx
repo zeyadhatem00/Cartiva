@@ -14,7 +14,7 @@ export default function AddTocartBtn({
   detailsPage: boolean;
   id: string;
 }) {
-  let { cart, setCart } = useContext(cartcontext);
+  let { setCart } = useContext(cartcontext);
   let { data: session } = useSession();
   let route = useRouter();
   async function addToCART(id: string) {

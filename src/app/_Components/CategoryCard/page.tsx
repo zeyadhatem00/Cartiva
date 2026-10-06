@@ -8,7 +8,7 @@ export default function CategoryCard(category: Category) {
     <>
       {category.categoryPage ? (
         <Link
-          href="/Shop"
+          href={`/CategorySelection/${category.name}`}
           className="group rounded-2xl border border-[#e4e7ec] bg-white p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[#b9cef3] hover:shadow-[0_18px_35px_rgba(40,100,215,0.12)]"
         >
           <div className="relative overflow-hidden rounded-xl bg-[#eef6ff]">
@@ -33,7 +33,7 @@ export default function CategoryCard(category: Category) {
         </Link>
       ) : (
         <Link
-          href="/Shop"
+          href={`/CategorySelection/${category.name}`}
           className="group rounded-2xl border border-[#e4e7ec] bg-white p-3 transition-all hover:-translate-y-1 hover:border-[#b9ccef] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2864d7]"
         >
           <div className="overflow-hidden rounded-xl bg-[#e5edf8]">

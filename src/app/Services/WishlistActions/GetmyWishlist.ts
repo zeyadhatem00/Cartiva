@@ -1,6 +1,6 @@
 import { getToken } from "../GetMyToken";
 
-export async function GetmyWishlist():Promise<wishlist> {
+export async function GetmyWishlist(): Promise<wishlist> {
   const token = await getToken();
 
   let req = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
@@ -9,7 +9,7 @@ export async function GetmyWishlist():Promise<wishlist> {
     },
   });
 
-  let res  = await req.json()
+  let res = await req.json();
 
-  return res
+  return res;
 }

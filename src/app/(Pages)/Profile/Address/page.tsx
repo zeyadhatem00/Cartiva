@@ -193,10 +193,7 @@ export default function Address() {
               </button>
             </div>
 
-            <form
-              onSubmit={handleSubmit(senddata)}
-              className="mt-6 space-y-4"
-            >
+            <form onSubmit={handleSubmit(senddata)} className="mt-6 space-y-4">
               <div>
                 <label
                   htmlFor="address-name"

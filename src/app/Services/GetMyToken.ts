@@ -1,4 +1,4 @@
-"use server"
+"use server";
 import { decode } from "next-auth/jwt";
 import { cookies } from "next/headers";
 
@@ -10,7 +10,7 @@ export async function getToken() {
     token: encryptedToken,
     secret: process.env.AUTH_SECRET!,
   });
-console.log(encryptedToken);
+  console.log(encryptedToken);
 
   return TrueToken?.token;
 }

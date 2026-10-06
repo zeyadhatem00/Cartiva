@@ -1,16 +1,19 @@
 import { getToken } from "../GetMyToken";
 
-export async function DeleteAWishlist(id:string) {
+export async function DeleteAWishlist(id: string) {
   const token = await getToken();
 
-  let req = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist/${id}`, {
-    method:'DELETE' ,
-    headers: {
-      token: `${token ? token : ""}`,
+  let req = await fetch(
+    `https://ecommerce.routemisr.com/api/v1/wishlist/${id}`,
+    {
+      method: "DELETE",
+      headers: {
+        token: `${token ? token : ""}`,
+      },
     },
-  });
+  );
 
-  let res  = await req.json()
+  let res = await req.json();
 
-  return res
+  return res;
 }

@@ -11,9 +11,7 @@ import {
   LockKeyhole,
   Mail,
   ShieldCheck,
-  ShoppingCart,
   Sparkles,
-  Truck,
 } from "lucide-react";
 
 import Link from "next/link";
@@ -46,10 +44,10 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-      <main className="mx-auto grid max-w-[1320px] gap-6 px-4 py-8 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:px-8 lg:py-16">
-        <section className="relative overflow-hidden rounded-[24px] bg-[#151922] px-6 py-10 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-14 lg:min-h-[650px] lg:px-14 lg:py-16">
-          <div className="pointer-events-none absolute -right-28 -top-32 size-[30rem] rounded-full bg-[#2864d7]/30 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-48 -left-20 size-[25rem] rounded-full bg-[#d9f7e9]/10 blur-3xl" />
+      <main className="mx-auto grid max-w-330 gap-6 px-4 py-8 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:px-8 lg:py-16">
+        <section className="relative overflow-hidden rounded-[24px] bg-[#151922] px-6 py-10 text-white shadow-[0_20px_48px_rgba(21,25,34,0.12)] sm:px-10 sm:py-14 lg:min-h-162.5 lg:px-14 lg:py-16">
+          <div className="pointer-events-none absolute -right-28 -top-32 size-120 rounded-full bg-[#2864d7]/30 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-48 -left-20 size-100 rounded-full bg-[#d9f7e9]/10 blur-3xl" />
 
           <div className="relative z-10">
             <p className="inline-flex items-center gap-2 rounded-md bg-[#d9f7e9] px-2.5 py-1.5 text-[9px] font-black uppercase tracking-[0.14em] text-[#15704a]">
@@ -57,7 +55,7 @@ export default function ForgotPasswordPage() {
               Account recovery
             </p>
 
-            <h1 className="mt-7 max-w-[10ch] font-display text-[clamp(3.1rem,6vw,6rem)] font-bold leading-[0.84] tracking-[-0.1em]">
+            <h1 className="mt-7 max-w-[10ch] font-display text-[clamp(3.1rem,6vw,6rem)] font-bold leading-[0.84] -tracking-widest">
               Back to your
               <span className="text-[#8fc4ff]"> account.</span>
             </h1>
@@ -67,14 +65,14 @@ export default function ForgotPasswordPage() {
               the Cartiva experience.
             </p>
 
-            <div className="relative mt-12 overflow-hidden rounded-[22px] border border-white/10 bg-gradient-to-br from-[#2864d7]/35 via-[#1b315d]/60 to-[#0d1118] p-6">
+            <div className="relative mt-12 overflow-hidden rounded-[22px] border border-white/10 bg-linear-to-br from-[#2864d7]/35 via-[#1b315d]/60 to-[#0d1118] p-6">
               <div className="absolute right-5 top-5 text-[#d9f7e9]/60">
                 <LockKeyhole size={26} />
               </div>
               <div className="absolute -bottom-20 -right-10 size-64 rounded-full border border-[#8fc4ff]/20" />
               <div className="absolute -bottom-12 -right-2 size-44 rounded-full border border-[#8fc4ff]/20" />
 
-              <div className="relative z-10 flex min-h-[220px] items-center justify-center">
+              <div className="relative z-10 flex min-h-55 items-center justify-center">
                 <div className="relative grid size-32 place-items-center rounded-[28px] border border-white/15 bg-white/10 shadow-[0_20px_45px_rgba(0,0,0,0.18)] backdrop-blur-sm">
                   <div className="absolute -left-10 top-8 grid size-14 -rotate-12 place-items-center rounded-2xl border border-white/15 bg-white/10 text-[#8fc4ff]">
                     <Mail size={22} />
@@ -128,7 +126,7 @@ export default function ForgotPasswordPage() {
         </section>
 
         <section className="rounded-[24px] border border-[#e4e7ec] bg-white p-6 shadow-[0_12px_32px_rgba(21,25,34,0.05)] sm:p-10 lg:p-12">
-          <div className="mx-auto max-w-[480px]">
+          <div className="mx-auto max-w-120">
             <Link
               href="/LogIn"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8a929f] transition-colors hover:text-[#2864d7]"
@@ -220,7 +218,7 @@ export default function ForgotPasswordPage() {
               </form>
             )}
 
-            {Step == 2 && <VerifyCode setStep={setStep} email = {email} />}
+            {Step == 2 && <VerifyCode setStep={setStep} email={email} />}
             {Step == 3 && <ResetPass />}
 
             {/**************************/}
@@ -264,7 +262,7 @@ export default function ForgotPasswordPage() {
               </div>
             )}
 
-            <div className="mt-5 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.1em] text-[#a5adb7]">
+            <div className="mt-5 flex items-center justify-center gap-2 text-[10px] uppercase tracking-widest text-[#a5adb7]">
               <LockKeyhole size={13} className="text-[#15704a]" />
               secured recovery
             </div>

@@ -1,6 +1,5 @@
 import { jwtDecode } from "jwt-decode";
-import { NextAuthOptions, Session } from "next-auth";
-import { JWT } from "next-auth/jwt";
+import { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 
 export let AuthOptions: NextAuthOptions = {
@@ -47,7 +46,7 @@ export let AuthOptions: NextAuthOptions = {
           email: res.user.email,
           name: res.user.name,
           token: res.token,
-          role : res.user.role,
+          role: res.user.role,
         };
       },
     }),
@@ -62,7 +61,7 @@ export let AuthOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.token = user.token;
-        token.role = user.role
+        token.role = user.role;
       }
 
       return token;

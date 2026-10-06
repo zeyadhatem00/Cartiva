@@ -1,4 +1,4 @@
- export interface cart  {
+export interface cart {
   status: string;
   numOfCartItems: number;
   cartId: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import { Product } from "@/app/interface/Products";
-import { Heart , Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { motion } from "motion/react";
 
 import Image from "next/image";
@@ -24,7 +24,7 @@ export default function ProductCard(details: Product) {
         {" "}
         <article className="group rounded-2xl border border-[#e4e7ec] bg-white p-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-[#c9d7f2] hover:shadow-[0_16px_30px_rgba(21,25,34,0.08)]">
           <div className="relative overflow-hidden rounded-xl bg-[#f0f2f5]">
-           <ADDtoWishlist id ={details._id} detailsPage={false}/>
+            <ADDtoWishlist id={details._id} detailsPage={false} />
             <Link href={`/productDetails/${details._id}`}>
               {" "}
               <Image
@@ -61,7 +61,7 @@ export default function ProductCard(details: Product) {
                   {details.price} EGP
                 </strong>
               </div>
-            <AddTocartBtn detailsPage = {false} id={details._id} />
+              <AddTocartBtn detailsPage={false} id={details._id} />
             </div>
           </div>
         </article>

@@ -33,7 +33,7 @@ export default function WishlistPage() {
     <>
       {Wishlist?.data.length == 0 ? (
         <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-          <main className="mx-auto flex max-w-[1320px] flex-col px-4 py-8 lg:px-8 lg:py-10">
+          <main className="mx-auto flex max-w-330 flex-col px-4 py-8 lg:px-8 lg:py-10">
             <nav
               className="flex items-center gap-2 text-[11px] font-semibold text-[#8a929f]"
               aria-label="Breadcrumb"
@@ -141,7 +141,7 @@ export default function WishlistPage() {
         </div>
       ) : (
         <div className="min-h-screen bg-[#f7f8fa] text-[#151922]">
-          <main className="mx-auto max-w-[1320px] px-4 py-8 lg:px-8 lg:py-10">
+          <main className="mx-auto max-w-330 px-4 py-8 lg:px-8 lg:py-10">
             <nav
               className="flex items-center gap-2 text-[11px] font-semibold text-[#8a929f]"
               aria-label="Breadcrumb"
@@ -189,7 +189,7 @@ export default function WishlistPage() {
                     <div className="flex min-w-0 items-center gap-4">
                       <Link
                         href={`productDetails/${item._id}`}
-                        className=" size-20 shrink-0 place-items-center overflow-hidden rounded-2xl bg-[#f0f2f5] ring-1 ring-transparent transition-all group-hover:ring-[#2864d7]/30 sm:size-[84px]"
+                        className=" size-20 shrink-0 place-items-center overflow-hidden rounded-2xl bg-[#f0f2f5] ring-1 ring-transparent transition-all group-hover:ring-[#2864d7]/30 sm:size-21"
                       >
                         <Image
                           src={item.imageCover}
@@ -248,10 +248,10 @@ export default function WishlistPage() {
                             toast.error(res.message);
                           }
                         }}
-                        className={`inline-flex cursor-pointer disabled:bg-green-700 disabled:text-white flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#151922] px-3 py-2.5 text-[9px] font-black uppercase tracking-[0.05em] text-white duration-150 transition-all hover:-translate-y-0.5 hover:bg-[#2864d7] active:scale-[0.98] sm:flex-none`}
+                        className={`inline-flex cursor-pointer disabled:bg-green-700 disabled:text-white flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#151922] px-3 py-2.5 text-[9px] font-black uppercase tracking-wider text-white duration-150 transition-all hover:-translate-y-0.5 hover:bg-[#2864d7] active:scale-[0.98] sm:flex-none`}
                         aria-label="Add product to cart"
                       >
-                        <ShoppingBag className="translate-y-[-1px]" size={12} />{" "}
+                        <ShoppingBag className="-translate-y-px" size={12} />{" "}
                         {cart?.data.products.some((product) => {
                           return product.product._id == item._id;
                         })

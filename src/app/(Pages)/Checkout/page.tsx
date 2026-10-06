@@ -49,19 +49,19 @@ export default function CheckoutPage() {
   });
 
   async function SendData(data: any) {
-    setLoading(true)
+    setLoading(true);
     if (visa) {
       let res = await VisaPayment(data, cart!.cartId);
       if (res.status == "success") {
         window.location.href = res.session.url;
-        setLoading(false)
+        setLoading(false);
       } else {
         toast.error(res.message);
       }
     } else {
       let res = await CashPayment(data, cart!.cartId);
       if (res.status == "success") {
-        setLoading(false)
+        setLoading(false);
         let cart = await GetCartProducts();
         setCart(cart);
         route.push("/allorders");
@@ -365,7 +365,6 @@ export default function CheckoutPage() {
                         type="submit"
                         className="duration-150  cursor-pointer mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2864d7] px-5 py-3.5 text-[11px] font-black uppercase tracking-widest text-white shadow-[0_8px_18px_rgba(40,100,215,0.2)] transition-all hover:bg-[#151922] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#2864d7]/20"
                       >
-                       
                         {loading ? (
                           <Spinner2 />
                         ) : (
