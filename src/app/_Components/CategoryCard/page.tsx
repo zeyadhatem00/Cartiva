@@ -34,7 +34,7 @@ export default function CategoryCard(category: Category) {
       ) : (
         <Link
           href={`/CategorySelection/${category.name}`}
-          className="group rounded-2xl border border-[#e4e7ec] bg-white p-3 transition-all hover:-translate-y-1 hover:border-[#b9ccef] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2864d7]"
+          className="group w-32 shrink-0 rounded-2xl border border-[#e4e7ec] bg-white p-3 transition-all hover:-translate-y-1 hover:border-[#b9ccef] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2864d7]"
         >
           <div className="overflow-hidden rounded-xl bg-[#e5edf8]">
             <Image
@@ -42,7 +42,7 @@ export default function CategoryCard(category: Category) {
               alt={category.name}
               width={100}
               height={100}
-              className="aspect-square h-full w-full object-cover transition-transform group-hover:scale-105"
+              className="aspect-square w-full object-cover transition-transform group-hover:scale-105"
             />
           </div>
           <div className="mt-3 flex items-center justify-between">
