@@ -41,7 +41,7 @@ export default async function CategoriesPage() {
 
         <section
           id="category-grid"
-          className="mx-auto max-w-330 px-4 py-12 lg:px-8 lg:py-16"
+          className="mt-12"
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
